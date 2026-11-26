@@ -1,0 +1,4 @@
+- [ ] Create account-owned data tables, access rules, legacy import, reset, and AI quota.
+- [ ] Add Google-only sign-in, protected hash routes, and account-aware navigation/profile defaults.
+- [ ] Replace Express AI with a protected Cloud function and preserve Demo fallback.
+- [ ] Remove Express dependencies/server, keep Vite as the dev command, and verify the app.
