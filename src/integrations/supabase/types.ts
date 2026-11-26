@@ -14,13 +14,231 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      activities: {
+        Row: {
+          created_at: string
+          data: Json | null
+          detail: string
+          happened_at: string
+          id: string
+          score: number | null
+          title: string
+          type: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          data?: Json | null
+          detail?: string
+          happened_at?: string
+          id?: string
+          score?: number | null
+          title: string
+          type: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          data?: Json | null
+          detail?: string
+          happened_at?: string
+          id?: string
+          score?: number | null
+          title?: string
+          type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ai_usage: {
+        Row: {
+          count: number
+          created_at: string
+          day: string
+          user_id: string
+        }
+        Insert: {
+          count?: number
+          created_at?: string
+          day: string
+          user_id: string
+        }
+        Update: {
+          count?: number
+          created_at?: string
+          day?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      daily_challenges: {
+        Row: {
+          answer: string
+          created_at: string
+          day: string
+          feedback: Json | null
+          question: string
+          user_id: string
+        }
+        Insert: {
+          answer?: string
+          created_at?: string
+          day: string
+          feedback?: Json | null
+          question?: string
+          user_id: string
+        }
+        Update: {
+          answer?: string
+          created_at?: string
+          day?: string
+          feedback?: Json | null
+          question?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      interviews: {
+        Row: {
+          ai: string | null
+          completed_at: string
+          count: number
+          created_at: string
+          difficulty: string
+          id: string
+          items: Json
+          mode: string
+          role: string
+          score: number
+          summary: Json
+          type: string
+          user_id: string
+        }
+        Insert: {
+          ai?: string | null
+          completed_at?: string
+          count?: number
+          created_at?: string
+          difficulty?: string
+          id?: string
+          items?: Json
+          mode?: string
+          role?: string
+          score?: number
+          summary?: Json
+          type?: string
+          user_id: string
+        }
+        Update: {
+          ai?: string | null
+          completed_at?: string
+          count?: number
+          created_at?: string
+          difficulty?: string
+          id?: string
+          items?: Json
+          mode?: string
+          role?: string
+          score?: number
+          summary?: Json
+          type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          bio: string
+          college: string
+          created_at: string
+          degree: string
+          email: string
+          grad_year: string
+          name: string
+          target_role: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          bio?: string
+          college?: string
+          created_at?: string
+          degree?: string
+          email?: string
+          grad_year?: string
+          name?: string
+          target_role?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          bio?: string
+          college?: string
+          created_at?: string
+          degree?: string
+          email?: string
+          grad_year?: string
+          name?: string
+          target_role?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      resume_analyses: {
+        Row: {
+          created_at: string
+          id: string
+          result: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          result: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          result?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      roadmap_progress: {
+        Row: {
+          created_at: string
+          done: Json
+          selected: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          done?: Json
+          selected?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          done?: Json
+          selected?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      consume_ai_call: { Args: never; Returns: number }
     }
     Enums: {
       [_ in never]: never
